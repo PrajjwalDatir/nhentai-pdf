@@ -38,5 +38,9 @@
     "eslint": "^7.31.0",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10"
   }
 }
