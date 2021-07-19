@@ -27,6 +27,8 @@
   "homepage": "https://github.com/PrajjwalDatir/nhentai-pdf#readme",
   "devDependencies": {
     "@types/node": "^16.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
     "eslint": "^7.31.0",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
