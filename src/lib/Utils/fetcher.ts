@@ -1,8 +1,8 @@
-import axios, { ResponseType } from 'axios'
+import axios from 'axios'
 
 type Headers = { [Header: string]: string }
 
-const get = async <T extends 'json' | 'arrayBuffer', R>(
+const get = async <T extends 'json' | 'arraybuffer', R>(
     url: string,
     type: T,
     headers?: Headers
@@ -10,7 +10,7 @@ const get = async <T extends 'json' | 'arrayBuffer', R>(
     (
         await axios.get(url, {
             headers,
-            responseType: type as ResponseType
+            responseType: type
         })
     ).data
 
