@@ -3,6 +3,8 @@ import { EventEmitter } from 'events'
 import parse from './parse'
 import ValidateID from './Decorators/ValidateID'
 import fetcher from './Utils/fetcher'
+import { Document } from './PDF'
+import { writeFile } from 'fs/promises'
 export default class Doujin extends EventEmitter {
     @ValidateID()
     id: string
@@ -34,6 +36,21 @@ export default class Doujin extends EventEmitter {
         this._info = parse(result, this._url)
         return this.info
     }
+
+    pdf = async (filename?: string): Promise<Buffer> => {
+        if (!this._info) await this.fetch()
+        const PDF = new Document(this._info?.pages as [], 'A4')
+        const buffer = await PDF.build()
+        if (filename) await writeFile(filename as unknown as string, buffer)
+        return buffer
+    }
+
+    save = async (filename?: string): Promise<string> => {
+        if (!this._info) await this.fetch()
+        filename = filename || `${this.info.title}.pdf`
+        await this.pdf(filename)
+        return filename
+    }
 }
 
 export interface IDoujinInfo {
@@ -46,6 +63,7 @@ export interface IDoujinInfo {
         groups: string[]
         languages: string[]
         categories: string[]
+        pages: number
     }
     pages: string[]
     link: string
