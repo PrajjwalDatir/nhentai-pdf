@@ -33,6 +33,7 @@
   "homepage": "https://github.com/PrajjwalDatir/nhentai-pdf#readme",
   "devDependencies": {
     "@types/node": "^16.3.3",
+    "@types/pdfkit": "^0.11.2",
     "@typescript-eslint/eslint-plugin": "^4.22.1",
     "@typescript-eslint/parser": "^4.22.1",
     "eslint": "^7.31.0",
@@ -41,6 +42,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
-    "cheerio": "^1.0.0-rc.10"
+    "cheerio": "^1.0.0-rc.10",
+    "pdfkit": "^0.12.1"
   }
 }
