@@ -5,9 +5,11 @@
     "lib": [
       "ESNext"
     ],                                   
-    "outDir": "./dist",                    
-    "strict": true,                                
-    "esModuleInterop": true,                        
+    "outDir": "./dist",       
+    "declaration": true,            
+    "strict": true,
+    "strictFunctionTypes": true,                      
+    "esModuleInterop": true,                    
     "skipLibCheck": true,                          
     "forceConsistentCasingInFileNames": true        
   },
