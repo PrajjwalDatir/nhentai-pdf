@@ -1,0 +1,28 @@
+{
+  "name": "nhentai-pdf",
+  "version": "1.0.0",
+  "description": " NPM package to be used for getting the holy numbers in pdf 🌚 Welcome to the Darkness ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrajjwalDatir/nhentai-pdf.git"
+  },
+  "keywords": [
+    "nhentai",
+    "nhentai",
+    "pdf",
+    "doujin",
+    "downloader",
+    "nhentai",
+    "downloader"
+  ],
+  "author": "PrajjwalDatir",
+  "license": "AGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/PrajjwalDatir/nhentai-pdf/issues"
+  },
+  "homepage": "https://github.com/PrajjwalDatir/nhentai-pdf#readme"
+}
