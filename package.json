@@ -3,8 +3,14 @@
   "version": "1.0.0",
   "description": " NPM package to be used for getting the holy numbers in pdf 🌚 Welcome to the Darkness ",
   "main": "index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc -p .",
+    "lint": "eslint \"src/**/*.ts\"",
+    "prettier-format": "prettier --config .prettierrc \"src/**/*.ts\" --write"
   },
   "repository": {
     "type": "git",
@@ -27,6 +33,8 @@
   "homepage": "https://github.com/PrajjwalDatir/nhentai-pdf#readme",
   "devDependencies": {
     "@types/node": "^16.3.3",
+    "@typescript-eslint/eslint-plugin": "^4.22.1",
+    "@typescript-eslint/parser": "^4.22.1",
     "eslint": "^7.31.0",
     "prettier": "^2.3.2",
     "typescript": "^4.3.5"
